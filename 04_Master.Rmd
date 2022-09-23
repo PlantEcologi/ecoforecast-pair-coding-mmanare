@@ -29,7 +29,7 @@ plot.NDVI(dat)
 
 Q1: This plot suggests that Fynbos greenness (NDVI) as observed from satellite saturates with time since fire. Why do you think it saturates rather than increasing linearly with time?
 
->*Answer 1:*
+>*Answer 1:*The reason why it saturates linearly with time is possibly because of the possible climatic conditions through out the year which affect the gradual recovery of plants postfire from seeds to mature crops. If the favourable conditions were consistent then seeds would have successfully geminated as per the use of prescribed burns and eventually the crops would have matured and remained healthy and green. 
 <br> 
 
 ### 2. Fit models using Non-linear Least Squares (NLS)
@@ -88,7 +88,7 @@ Lots more parameters...
 
 Q2: How do the estimates for the common parameters compare?
 
->*Answer 2:*
+>*Answer 2:* Alpha and lambda estimates in the first model are relatively high compared to the second model,how ever the estimate for gamma is high in the second model relative to the first.These being the only estimates that appear in both models.The standard error associated with these estimates is generally lower in the second thus implying more accuracy from this model compared to the first.
 <br>
 
 ### 3. Compare NLS models using ANOVA
@@ -105,10 +105,10 @@ anova(fit_negexp, fit_negexpS)
 
 Q3: Which model is better?
 
->*Answer 3:*
-Q4: How many degrees of freedom are there in this ANOVA and why (i.e. what are they)?
+>*Answer 3:*Model 2,a very small p-value (4.12e-14) imlplies significantly improved fit over the model 2 after adding the other variables.
+Q4: How many degrees of freedom are there in this ANOVA and why (i.e. what are they)? 
 
->*Answer 4:*
+>*Answer 4:*2
 <br>
 
 ### 4. Fit models using Maximum Likelihood Estimation (MLE)
@@ -190,7 +190,7 @@ AIC_simple - AIC_full
 
 Q5: Is there a preferred model and if so, which one?
 
->*Answer 5:*
+>*Answer 5:*lowest AIC is always better, hence AIC_full = 6 + 2*fit_negexpMLES$value is a better model.
 <br>
 
 The nice thing about AIC is that the models you compare do not have to be nested like they do for ANOVA, as long as the data are the same. There are a few other constraints however... 
@@ -207,5 +207,5 @@ You'll notice that these are completely different to the AICs for the MLE models
 
 Q6: Why is it not okay to compare the AIC of these NLS models with the AIC of the MLE models? Hint: type `?AIC` into the R console and do some reading.
 
->*Answer 6:*
+>*Answer 6:*AIC theory requires that the log-likelihood is maximized. AIC can be computed for models that are not fitted with maximum likelihood, but there is no need to compare their AIC values.
 <br>

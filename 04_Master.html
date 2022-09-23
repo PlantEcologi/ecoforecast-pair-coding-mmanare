@@ -389,7 +389,13 @@ plot.NDVI(dat)</code></pre>
 satellite saturates with time since fire. Why do you think it saturates
 rather than increasing linearly with time?</p>
 <blockquote>
-<p><em>Answer 1:</em> <br></p>
+<p><em>Answer 1:</em>The reason why it saturates linearly with time is
+possibly because of the possible climatic conditions through out the
+year which affect the gradual recovery of plants postfire from seeds to
+mature crops. If the favourable conditions were consistent then seeds
+would have successfully geminated as per the use of prescribed burns and
+eventually the crops would have matured and remained healthy and green.
+<br></p>
 </blockquote>
 </div>
 <div id="fit-models-using-non-linear-least-squares-nls" class="section level3">
@@ -463,7 +469,12 @@ summary(fit_negexpS)</code></pre>
 <p>Lots more parameters…</p>
 <p>Q2: How do the estimates for the common parameters compare?</p>
 <blockquote>
-<p><em>Answer 2:</em> <br></p>
+<p><em>Answer 2:</em> Alpha and lambda estimates in the first model are
+relatively high compared to the second model,how ever the estimate for
+gamma is high in the second model relative to the first.These being the
+only estimates that appear in both models.The standard error associated
+with these estimates is generally lower in the second thus implying more
+accuracy from this model compared to the first. <br></p>
 </blockquote>
 </div>
 <div id="compare-nls-models-using-anova" class="section level3">
@@ -491,11 +502,13 @@ p-value.</p>
 <p><br></p>
 <p>Q3: Which model is better?</p>
 <blockquote>
-<p><em>Answer 3:</em> Q4: How many degrees of freedom are there in this
-ANOVA and why (i.e. what are they)?</p>
+<p><em>Answer 3:</em>Model 2,a very small p-value (4.12e-14) imlplies
+significantly improved fit over the model 2 after adding the other
+variables. Q4: How many degrees of freedom are there in this ANOVA and
+why (i.e. what are they)?</p>
 </blockquote>
 <blockquote>
-<p><em>Answer 4:</em> <br></p>
+<p><em>Answer 4:</em>2 <br></p>
 </blockquote>
 </div>
 <div id="fit-models-using-maximum-likelihood-estimation-mle" class="section level3">
@@ -597,7 +610,8 @@ significantly different at an <span class="math inline">\(\alpha\)</span> of <sp
 <p><br></p>
 <p>Q5: Is there a preferred model and if so, which one?</p>
 <blockquote>
-<p><em>Answer 5:</em> <br></p>
+<p><em>Answer 5:</em>lowest AIC is always better, hence AIC_full = 6 +
+2*fit_negexpMLES$value is a better model. <br></p>
 </blockquote>
 <p>The nice thing about AIC is that the models you compare do not have
 to be nested like they do for ANOVA, as long as the data are the same.
@@ -614,7 +628,10 @@ MLE models…</p>
 the AIC of the MLE models? Hint: type <code>?AIC</code> into the R
 console and do some reading.</p>
 <blockquote>
-<p><em>Answer 6:</em> <br></p>
+<p><em>Answer 6:</em>AIC theory requires that the log-likelihood is
+maximized. AIC can be computed for models that are not fitted with
+maximum likelihood, but there is no need to compare their AIC values.
+<br></p>
 </blockquote>
 </div>
 
